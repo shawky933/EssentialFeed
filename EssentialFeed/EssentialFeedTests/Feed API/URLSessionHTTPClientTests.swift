@@ -77,6 +77,10 @@ class URLSessionHTTPClientTests: XCTestCase {
     
     // MARK: - Helpers
     
+    private func makeSUT() -> URLSessionHTTPClient {
+        URLSessionHTTPClient()
+    }
+    
     private class URLProtocolStub: URLProtocol {
         private static var stub: Stub?
         private static var requestObserver: ((URLRequest) -> Void)?
