@@ -35,47 +35,47 @@ class LoadFeedFromUseCaseTests: XCTestCase {
         XCTAssertEqual(client.requestedURLs, [url, url])
     }
     
-    func test_load_deliversErrorOnClientError() {
+    func test_load_deliversErrorOnClientError() throws {
         let (sut, client) = makeSUT()
         
-        expect(sut, toCompleteWith: failure(.connectivity)) {
+        try expect(sut, toCompleteWith: failure(.connectivity)) {
             let clientError = NSError(domain: "Test", code: 0)
             client.complete(with: clientError)
         }
     }
     
-    func test_load_deliversErrorOnNon200HTTPResponse() {
+    func test_load_deliversErrorOnNon200HTTPResponse() throws {
         let (sut, client) = makeSUT()
         
         let samples = [199, 201, 300, 400, 500]
         
-        samples.enumerated().forEach { index, code in
-            expect(sut, toCompleteWith: failure(.invalidData)) {
-                let json = makeItemsJSON([])
+        try samples.enumerated().forEach { index, code in
+            try expect(sut, toCompleteWith: failure(.invalidData)) {
+                let json = try makeItemsJSON([])
                 client.complete(withStatusCode: code, data: json, at: index)
             }
         }
     }
     
-    func test_load_deliversErrorOn200HTTPResponseWithInvalidJSON() {
+    func test_load_deliversErrorOn200HTTPResponseWithInvalidJSON() throws {
         let (sut, client) = makeSUT()
         
-        expect(sut, toCompleteWith: failure(.invalidData)) {
+        try expect(sut, toCompleteWith: failure(.invalidData)) {
             let invalidJSON = Data("invalid json".utf8)
             client.complete(withStatusCode: 200, data: invalidJSON)
         }
     }
     
-    func test_load_deliversNoItemsOn200HTTPResponseWithEmptyJSONList() {
+    func test_load_deliversNoItemsOn200HTTPResponseWithEmptyJSONList() throws {
         let (sut, client) = makeSUT()
         
-        expect(sut, toCompleteWith: .success([])) {
-            let emptyListJSON = makeItemsJSON([])
+        try expect(sut, toCompleteWith: .success([])) {
+            let emptyListJSON = try makeItemsJSON([])
             client.complete(withStatusCode: 200, data: emptyListJSON)
         }
     }
     
-    func test_load_deliversItemsOn200HTTPResponseWithJSONList() {
+    func test_load_deliversItemsOn200HTTPResponseWithJSONList() throws {
         let (sut, client) = makeSUT()
         
         let item1 = makeItem(id: UUID(), imageURL: URL(string: "http://a-url.com")!)
@@ -89,14 +89,14 @@ class LoadFeedFromUseCaseTests: XCTestCase {
         
         let items = [item1.model, item2.model]
         
-        expect(sut, toCompleteWith: .success(items)) {
-            let json = makeItemsJSON([item1.json, item2.json])
+        try expect(sut, toCompleteWith: .success(items)) {
+            let json = try makeItemsJSON([item1.json, item2.json])
             client.complete(withStatusCode: 200, data: json)
         }
     }
     
-    func test_load_doesNotDeliverResultAfterSUTInstanceHasBeenDeallocated() {
-        
+    func test_load_doesNotDeliverResultAfterSUTInstanceHasBeenDeallocated() throws {
+
         let url: URL = URL(string: "https://any-url.com")!
         let client = HTTPClientSpy()
         var sut: RemoteFeedLoader? = RemoteFeedLoader(url: url, client: client)
@@ -105,8 +105,8 @@ class LoadFeedFromUseCaseTests: XCTestCase {
         sut?.load { capturedResults.append($0) }
         
         sut = nil
-        client.complete(withStatusCode: 200, data: makeItemsJSON([]))
-        
+        client.complete(withStatusCode: 200, data: try makeItemsJSON([]))
+
         XCTAssertTrue(capturedResults.isEmpty)
     }
     
@@ -133,8 +133,8 @@ class LoadFeedFromUseCaseTests: XCTestCase {
         description: String? = nil,
         location: String? = nil,
         imageURL: URL
-    ) -> (model: FeedItem, json: [String: Any]) {
-        let item = FeedItem(id: id, description: description, location: location, imageURL: imageURL)
+    ) -> (model: FeedImage, json: [String: Any]) {
+        let item = FeedImage(id: id, description: description, location: location, url: imageURL)
         
         let json = [
             "id": id.uuidString,
@@ -146,18 +146,18 @@ class LoadFeedFromUseCaseTests: XCTestCase {
         return (item, json)
     }
     
-    private func makeItemsJSON(_ items: [[String: Any]]) -> Data {
+    private func makeItemsJSON(_ items: [[String: Any]]) throws -> Data {
         let json = ["items": items]
-        return try! JSONSerialization.data(withJSONObject: json)
+        return try JSONSerialization.data(withJSONObject: json)
     }
     
     private func expect(
         _ sut: RemoteFeedLoader,
         toCompleteWith expectedResult: RemoteFeedLoader.Result,
-        when action: () -> Void,
+        when action: () throws -> Void,
         file: StaticString = #filePath,
         line: UInt = #line
-    ) {
+    ) throws {
         let exp = expectation(description: "Wait for load completion")
         
         sut.load { receivedResult in
@@ -178,8 +178,8 @@ class LoadFeedFromUseCaseTests: XCTestCase {
             exp.fulfill()
         }
         
-        action()
-        
+        try action()
+
         wait(for: [exp], timeout: 1.0)
     }
     
