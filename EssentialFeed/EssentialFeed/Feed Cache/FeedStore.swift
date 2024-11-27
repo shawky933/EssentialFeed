@@ -14,6 +14,7 @@ public protocol FeedStore {
     typealias DeletionCompletion = (DeletionResult) -> Void
 
     typealias InsertionResult = Result<Void, Error>
+    typealias Stupid = Int
     typealias InsertionCompletion = (InsertionResult) -> Void
 
     typealias RetrievalResult = Result<CachedFeed?, Error>
