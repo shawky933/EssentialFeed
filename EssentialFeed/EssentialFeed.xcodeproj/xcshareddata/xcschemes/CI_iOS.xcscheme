@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <Scheme
-   LastUpgradeVersion = "1600"
+   LastUpgradeVersion = "1010"
    version = "1.7">
    <BuildAction
       parallelizeBuildables = "YES"
@@ -49,7 +49,7 @@
       </CodeCoverageTargets>
       <TestPlans>
          <TestPlanReference
-            reference = "container:EssentialFeedTests/EssentialFeed.xctestplan"
+            reference = "container:CI_iOS.xctestplan"
             default = "YES">
          </TestPlanReference>
       </TestPlans>
@@ -62,6 +62,28 @@
                BlueprintIdentifier = "080EDEF921B6DA7E00813479"
                BuildableName = "EssentialFeedTests.xctest"
                BlueprintName = "EssentialFeedTests"
+               ReferencedContainer = "container:EssentialFeed.xcodeproj">
+            </BuildableReference>
+         </TestableReference>
+         <TestableReference
+            skipped = "NO"
+            testExecutionOrdering = "random">
+            <BuildableReference
+               BuildableIdentifier = "primary"
+               BlueprintIdentifier = "F78564D42CD3FDD70015108C"
+               BuildableName = "EssentialFeedAPIEndToEndTests.xctest"
+               BlueprintName = "EssentialFeedAPIEndToEndTests"
+               ReferencedContainer = "container:EssentialFeed.xcodeproj">
+            </BuildableReference>
+         </TestableReference>
+         <TestableReference
+            skipped = "NO"
+            testExecutionOrdering = "random">
+            <BuildableReference
+               BuildableIdentifier = "primary"
+               BlueprintIdentifier = "F7970BCB2CEDDCF500246108"
+               BuildableName = "EssentialFeedCacheIntegrationTests.xctest"
+               BlueprintName = "EssentialFeedCacheIntegrationTests"
                ReferencedContainer = "container:EssentialFeed.xcodeproj">
             </BuildableReference>
          </TestableReference>
@@ -86,12 +108,6 @@
             ReferencedContainer = "container:EssentialFeed.xcodeproj">
          </BuildableReference>
       </MacroExpansion>
-      <CommandLineArguments>
-         <CommandLineArgument
-            argument = "-com.apple.CoreData.ConcurrencyDebug 1"
-            isEnabled = "YES">
-         </CommandLineArgument>
-      </CommandLineArguments>
    </LaunchAction>
    <ProfileAction
       buildConfiguration = "Release"
