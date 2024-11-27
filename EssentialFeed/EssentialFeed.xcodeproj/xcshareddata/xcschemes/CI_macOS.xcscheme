@@ -49,7 +49,7 @@
       </CodeCoverageTargets>
       <TestPlans>
          <TestPlanReference
-            reference = "container:CI.xctestplan"
+            reference = "container:CI_macOS.xctestplan"
             default = "YES">
          </TestPlanReference>
       </TestPlans>
