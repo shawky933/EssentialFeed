@@ -9,6 +9,20 @@
     }
   ],
   "defaultOptions" : {
+    "codeCoverage" : {
+      "targets" : [
+        {
+          "containerPath" : "container:EssentialFeed.xcodeproj",
+          "identifier" : "F701A9A02CF72E970021F753",
+          "name" : "EssentialFeediOS"
+        }
+      ]
+    },
+    "targetForVariableExpansion" : {
+      "containerPath" : "container:EssentialFeed.xcodeproj",
+      "identifier" : "F701A9A02CF72E970021F753",
+      "name" : "EssentialFeediOS"
+    },
     "testExecutionOrdering" : "random"
   },
   "testTargets" : [
