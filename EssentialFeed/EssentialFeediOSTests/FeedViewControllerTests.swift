@@ -13,7 +13,7 @@ import EssentialFeediOS
 final class FeedViewControllerTests: XCTestCase {
 
     func test_loadFeedActions_requestFeedFromLoader() {
-        let (sut, loader) = makeSut()
+        let (sut, loader) = makeSUT()
         XCTAssertEqual(loader.loadFeedCallCount, 0, "Expected no loading requests before view is loaded")
 
         sut.simulateAppearance()
@@ -27,7 +27,7 @@ final class FeedViewControllerTests: XCTestCase {
     }
 
     func test_loadingFeedIndicator_isVisibleWhileLoadingFeed() {
-        let (sut, loader) = makeSut()
+        let (sut, loader) = makeSUT()
 
         sut.simulateAppearance()
         XCTAssertTrue(sut.isShowingLoadingIndicator, "Expected loading indicator once view is loaded")
@@ -47,7 +47,7 @@ final class FeedViewControllerTests: XCTestCase {
         let image1 = makeImage(description: nil, location: "another location")
         let image2 = makeImage(description: "another description", location: nil)
         let image3 = makeImage(description: nil, location: nil)
-        let (sut, loader) = makeSut()
+        let (sut, loader) = makeSUT()
         
         sut.loadViewIfNeeded()
         assertThat(sut, isRendering: [])
@@ -62,7 +62,7 @@ final class FeedViewControllerTests: XCTestCase {
 
     func test_loadFeedCompletion_doesNotAlterCurrentRenderingStateOnError() {
         let image0 = makeImage()
-        let (sut, loader) = makeSut()
+        let (sut, loader) = makeSUT()
 
         sut.loadViewIfNeeded()
         loader.completeFeedLoading(with: [image0], at: 0)
@@ -76,7 +76,7 @@ final class FeedViewControllerTests: XCTestCase {
     func test_feedImageView_loadsImageURLWhenVisible() {
         let image0 = makeImage(url: URL(string: "http://url-0.com")!)
         let image1 = makeImage(url: URL(string: "http://url-1.com")!)
-        let (sut, loader) = makeSut()
+        let (sut, loader) = makeSUT()
 
         sut.loadViewIfNeeded()
         loader.completeFeedLoading(with: [image0, image1])
@@ -93,7 +93,7 @@ final class FeedViewControllerTests: XCTestCase {
     func test_feedImageView_cancelsImageLoadingWhenNotVisibleAnymore() {
         let image0 = makeImage(url: URL(string: "http://url-0.com")!)
         let image1 = makeImage(url: URL(string: "http://url-1.com")!)
-        let (sut, loader) = makeSut()
+        let (sut, loader) = makeSUT()
         
         sut.loadViewIfNeeded()
         loader.completeFeedLoading(with: [image0, image1])
@@ -106,9 +106,29 @@ final class FeedViewControllerTests: XCTestCase {
         XCTAssertEqual(loader.cancelledImageURLs, [image0.url, image1.url], "Expected two cancelled image URL requests once second image is also not visible anymore")
     }
 
+    func test_feedImageViewLoadingIndicator_isVisibleWhileLoadingImage() {
+        let (sut, loader) = makeSUT()
+
+        sut.loadViewIfNeeded()
+        loader.completeFeedLoading(with: [makeImage(), makeImage()])
+
+        let view0 = sut.simulateFeedImageViewVisible(at: 0)
+        let view1 = sut.simulateFeedImageViewVisible(at: 1)
+        XCTAssertEqual(view0?.isShowingImageLoadingIndicator, true, "Expected loading indicator for first view while loading first image")
+        XCTAssertEqual(view1?.isShowingImageLoadingIndicator, true, "Expected loading indicator for second view while loading second image")
+
+        loader.completeImageLoading(at: 0)
+        XCTAssertEqual(view0?.isShowingImageLoadingIndicator, false, "Expected no loading indicator for first view once first image loading completes successfully")
+        XCTAssertEqual(view1?.isShowingImageLoadingIndicator, true, "Expected no loading indicator state change for second view once first image loading completes successfully")
+
+        loader.completeImageLoadingWithError(at: 1)
+        XCTAssertEqual(view0?.isShowingImageLoadingIndicator, false, "Expected no loading indicator state change for first view once second image loading completes with error")
+        XCTAssertEqual(view1?.isShowingImageLoadingIndicator, false, "Expected no loading indicator for second view once second image loading completes with error")
+    }
+
     // MARK: - Helpers
 
-    private func makeSut(
+    private func makeSUT(
         file: StaticString = #filePath, line: UInt = #line
     ) -> (sut: FeedViewController, loader: LoaderSpy) {
         let loader = LoaderSpy()
@@ -209,7 +229,7 @@ final class FeedViewControllerTests: XCTestCase {
             feedRequests[index](.failure(error))
         }
 
-        // MARK: - FeedImageLoader
+        // MARK: - FeedImageDataLoader
 
         private struct TaskSpy: FeedImageDataLoaderTask {
             let cancelCallBack: () -> Void
@@ -218,14 +238,31 @@ final class FeedViewControllerTests: XCTestCase {
             }
         }
 
-        private(set) var loadedImageURLs = [URL]()
+        private var imageRequests = [(url: URL, completion: (FeedImageDataLoader.Result) -> Void)]()
+
+        var loadedImageURLs: [URL] {
+            imageRequests.map(\.url)
+        }
+
         private(set) var cancelledImageURLs = [URL]()
 
-        func loadImageData(from url: URL) -> FeedImageDataLoaderTask {
-            loadedImageURLs.append(url)
+        func loadImageData(
+            from url: URL,
+            completion: @escaping (FeedImageDataLoader.Result) -> Void
+        ) -> FeedImageDataLoaderTask {
+            imageRequests.append((url, completion))
             return TaskSpy { [weak self] in
                 self?.cancelledImageURLs.append(url)
             }
+        }
+
+        func completeImageLoading(with imageData: Data = Data(), at index: Int = 0) {
+            imageRequests[index].completion(.success(imageData))
+        }
+
+        func completeImageLoadingWithError(at index: Int = 0) {
+            let error = NSError(domain: "an error", code: 0)
+            imageRequests[index].completion(.failure(error))
         }
     }
 }
@@ -288,6 +325,10 @@ private extension FeedViewController {
 private extension FeedImageCell {
     var isShowingLocation: Bool {
         !locationContainer.isHidden
+    }
+
+    var isShowingImageLoadingIndicator: Bool {
+        feedImageContainer.isShimmering
     }
 
     var locationText: String? {
