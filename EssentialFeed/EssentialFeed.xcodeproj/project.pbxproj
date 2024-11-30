@@ -289,9 +289,8 @@
 		F701A9BF2CF733D40021F753 /* EssentialFeediOS */ = {
 			isa = PBXGroup;
 			children = (
-				F701A9E02CF881F70021F753 /* FeedViewController.swift */,
-				F701A9E22CF9DF4B0021F753 /* FeedImageCell.swift */,
-				F701A9E42CF9FA810021F753 /* UIView+Shimmering.swift */,
+				F701A9F02CFB00280021F753 /* Controllers */,
+				F701A9F12CFB00380021F753 /* Views */,
 			);
 			path = EssentialFeediOS;
 			sourceTree = "<group>";
@@ -300,12 +299,8 @@
 			isa = PBXGroup;
 			children = (
 				F701A9C02CF733D80021F753 /* EssentialFeediOS.xctestplan */,
-				F701A9E62CFAFC500021F753 /* XCTestCase+MemoryLeakTracking.swift */,
-				F701A9D72CF771460021F753 /* FeedViewControllerTests.swift */,
-				F701A9EE2CFAFED60021F753 /* UIControl+TestHelpers.swift */,
-				F701A9EC2CFAFE790021F753 /* UIButton+TestHelpers.swift */,
-				F701A9EA2CFAFDDE0021F753 /* UIRefreshControl+TestHelpers.swift */,
-				F701A9E82CFAFCD20021F753 /* UIImage+TestHelpers.swift */,
+				F701A9F32CFB00890021F753 /* Controllers */,
+				F701A9F22CFB00760021F753 /* Helpers */,
 			);
 			path = EssentialFeediOSTests;
 			sourceTree = "<group>";
@@ -315,6 +310,43 @@
 			children = (
 			);
 			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		F701A9F02CFB00280021F753 /* Controllers */ = {
+			isa = PBXGroup;
+			children = (
+				F701A9E02CF881F70021F753 /* FeedViewController.swift */,
+			);
+			path = Controllers;
+			sourceTree = "<group>";
+		};
+		F701A9F12CFB00380021F753 /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				F701A9E22CF9DF4B0021F753 /* FeedImageCell.swift */,
+				F701A9E42CF9FA810021F753 /* UIView+Shimmering.swift */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
+		F701A9F22CFB00760021F753 /* Helpers */ = {
+			isa = PBXGroup;
+			children = (
+				F701A9E62CFAFC500021F753 /* XCTestCase+MemoryLeakTracking.swift */,
+				F701A9EE2CFAFED60021F753 /* UIControl+TestHelpers.swift */,
+				F701A9EC2CFAFE790021F753 /* UIButton+TestHelpers.swift */,
+				F701A9EA2CFAFDDE0021F753 /* UIRefreshControl+TestHelpers.swift */,
+				F701A9E82CFAFCD20021F753 /* UIImage+TestHelpers.swift */,
+			);
+			path = Helpers;
+			sourceTree = "<group>";
+		};
+		F701A9F32CFB00890021F753 /* Controllers */ = {
+			isa = PBXGroup;
+			children = (
+				F701A9D72CF771460021F753 /* FeedViewControllerTests.swift */,
+			);
+			path = Controllers;
 			sourceTree = "<group>";
 		};
 		F70D5BDC2CE29CDD00640DB3 /* Helpers */ = {
