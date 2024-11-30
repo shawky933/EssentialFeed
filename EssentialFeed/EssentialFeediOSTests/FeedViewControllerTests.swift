@@ -426,6 +426,19 @@ private extension FeedViewController {
     }
 
     private func replaceRefreshControlWithFakeForiOS17Support() {
+        class FakeRefreshControl: UIRefreshControl {
+            private var _isRefreshing: Bool = false
+            override var isRefreshing: Bool { _isRefreshing }
+
+            override func beginRefreshing() {
+                _isRefreshing = true
+            }
+
+            override func endRefreshing() {
+                _isRefreshing = false
+            }
+        }
+
         let fake = FakeRefreshControl()
         refreshControl?.allTargets.forEach { target in
             refreshControl?.actions(forTarget: target, forControlEvent: .valueChanged)?.forEach { action in
@@ -475,19 +488,5 @@ private extension FeedImageCell {
 
     func simulateRetryAction() {
         feedImageRetryButton.simulateTap()
-    }
-}
-
-private class FakeRefreshControl: UIRefreshControl {
-    private var _isRefreshing: Bool = false
-
-    override var isRefreshing: Bool { _isRefreshing }
-
-    override func beginRefreshing() {
-        _isRefreshing = true
-    }
-
-    override func endRefreshing() {
-        _isRefreshing = false
     }
 }
