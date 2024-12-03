@@ -79,6 +79,9 @@ Location</string>
                                                                 <fontDescription key="titleFontDescription" type="system" pointSize="60"/>
                                                                 <color key="baseForegroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                             </buttonConfiguration>
+                                                            <connections>
+                                                                <action selector="retryButtonTapped" destination="eg3-Us-AL0" eventType="touchUpInside" id="ibj-SF-chE"/>
+                                                            </connections>
                                                         </button>
                                                     </subviews>
                                                     <color key="backgroundColor" red="0.89019607840000003" green="0.89019607840000003" blue="0.89019607840000003" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
@@ -120,6 +123,14 @@ Location</string>
                                         <constraint firstItem="t31-Hc-Vg5" firstAttribute="leading" secondItem="Fys-wY-bZH" secondAttribute="leadingMargin" id="zhF-R8-9mv"/>
                                     </constraints>
                                 </tableViewCellContentView>
+                                <connections>
+                                    <outlet property="descriptionLabel" destination="Pi4-aK-C0S" id="LiW-fI-bCw"/>
+                                    <outlet property="feedImageContainer" destination="APp-cc-sG5" id="lyh-IO-dat"/>
+                                    <outlet property="feedImageRetryButton" destination="54I-ua-VHC" id="duG-BS-tId"/>
+                                    <outlet property="feedImageView" destination="hPJ-iR-Uhc" id="iux-oI-irs"/>
+                                    <outlet property="locationContainer" destination="Wpv-bz-3wR" id="pz9-2n-ccQ"/>
+                                    <outlet property="locationLabel" destination="jLu-lC-Yxa" id="CSF-DR-gNw"/>
+                                </connections>
                             </tableViewCell>
                         </prototypes>
                         <connections>
