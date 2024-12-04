@@ -80,6 +80,7 @@
 		F7A98B402CD2168900D499BD /* HTTPClient.swift in Sources */ = {isa = PBXBuildFile; fileRef = F7A98B3F2CD2168900D499BD /* HTTPClient.swift */; };
 		F7A98B422CD216DF00D499BD /* FeedItemsMapper.swift in Sources */ = {isa = PBXBuildFile; fileRef = F7A98B412CD216DF00D499BD /* FeedItemsMapper.swift */; };
 		F7BBB81A2CD23C9C0081AA7F /* URLSessionHTTPClientTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = F7BBB8192CD23C9C0081AA7F /* URLSessionHTTPClientTests.swift */; };
+		F7EA345E2D0103E000A6974D /* MainQueueDispatchDecorator.swift in Sources */ = {isa = PBXBuildFile; fileRef = F7EA345D2D0103E000A6974D /* MainQueueDispatchDecorator.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -212,6 +213,7 @@
 		F7A98B3F2CD2168900D499BD /* HTTPClient.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HTTPClient.swift; sourceTree = "<group>"; };
 		F7A98B412CD216DF00D499BD /* FeedItemsMapper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FeedItemsMapper.swift; sourceTree = "<group>"; };
 		F7BBB8192CD23C9C0081AA7F /* URLSessionHTTPClientTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = URLSessionHTTPClientTests.swift; sourceTree = "<group>"; };
+		F7EA345D2D0103E000A6974D /* MainQueueDispatchDecorator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainQueueDispatchDecorator.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -423,6 +425,7 @@
 			isa = PBXGroup;
 			children = (
 				F701AA092CFB14290021F753 /* FeedUIComposer.swift */,
+				F7EA345D2D0103E000A6974D /* MainQueueDispatchDecorator.swift */,
 			);
 			path = Composers;
 			sourceTree = "<group>";
@@ -866,6 +869,7 @@
 				F726C93E2D005CA700EC8D3B /* FeedLoadingViewModel.swift in Sources */,
 				F701A9E12CF882D60021F753 /* FeedViewController.swift in Sources */,
 				F726C9382CFF51CD00EC8D3B /* UITableView+Dequeueing.swift in Sources */,
+				F7EA345E2D0103E000A6974D /* MainQueueDispatchDecorator.swift in Sources */,
 				F701A9E32CF9DF4C0021F753 /* FeedImageCell.swift in Sources */,
 				F726C91A2CFF044500EC8D3B /* FeedImageViewModel.swift in Sources */,
 				F701AA052CFB10800021F753 /* FeedImageCellController.swift in Sources */,
