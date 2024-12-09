@@ -43,6 +43,10 @@ extension FeedViewController {
         dataSource?.tableView?(tableView, cancelPrefetchingForRowsAt: [index])
     }
 
+    var errorMessage: String? {
+        errorView.message
+    }
+
     var isShowingLoadingIndicator: Bool {
         refreshControl?.isRefreshing ?? false
     }
