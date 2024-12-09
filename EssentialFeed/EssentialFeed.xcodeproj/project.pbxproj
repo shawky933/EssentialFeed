@@ -91,6 +91,7 @@
 		F7EA347D2D07258300A6974D /* FeedPresenterTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = F7EA347C2D07257500A6974D /* FeedPresenterTests.swift */; };
 		F7EA34852D07315200A6974D /* FeedPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = F7EA34842D07315200A6974D /* FeedPresenter.swift */; };
 		F7EA34862D07320B00A6974D /* Feed.strings in Resources */ = {isa = PBXBuildFile; fileRef = F7EA34812D072E4000A6974D /* Feed.strings */; };
+		F7EA34882D07327B00A6974D /* FeedViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = F7EA34872D07327B00A6974D /* FeedViewModel.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -236,6 +237,7 @@
 		F7EA347F2D072E4000A6974D /* Feed.strings */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = Feed.strings; path = "pt-BR.lproj/Feed.strings"; sourceTree = "<group>"; };
 		F7EA34802D072E4000A6974D /* Feed.strings */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = Feed.strings; path = el.lproj/Feed.strings; sourceTree = "<group>"; };
 		F7EA34842D07315200A6974D /* FeedPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FeedPresenter.swift; sourceTree = "<group>"; };
+		F7EA34872D07327B00A6974D /* FeedViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FeedViewModel.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -615,6 +617,7 @@
 		F7EA34832D07313100A6974D /* Feed Presentation */ = {
 			isa = PBXGroup;
 			children = (
+				F7EA34872D07327B00A6974D /* FeedViewModel.swift */,
 				F7EA34842D07315200A6974D /* FeedPresenter.swift */,
 				F7EA34812D072E4000A6974D /* Feed.strings */,
 			);
@@ -881,6 +884,7 @@
 				F799ECF52CC8DF7A00E1237F /* RemoteFeedLoader.swift in Sources */,
 				F70D5BFE2CEC848A00640DB3 /* FeedStore.xcdatamodeld in Sources */,
 				F70D5BD92CE2421800640DB3 /* LocalFeedImage.swift in Sources */,
+				F7EA34882D07327B00A6974D /* FeedViewModel.swift in Sources */,
 				F74A50392CDCE6E00066BF5D /* FeedStore.swift in Sources */,
 				F74A50372CDCE6680066BF5D /* LocalFeedLoader.swift in Sources */,
 				F7EA34852D07315200A6974D /* FeedPresenter.swift in Sources */,
