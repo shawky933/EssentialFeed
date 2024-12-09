@@ -85,6 +85,7 @@
 		F7EA34622D01048900A6974D /* FeedImageDataLoaderPresentationAdapter.swift in Sources */ = {isa = PBXBuildFile; fileRef = F7EA34612D01048900A6974D /* FeedImageDataLoaderPresentationAdapter.swift */; };
 		F7EA34642D0104C300A6974D /* FeedLoaderPresentationAdapter.swift in Sources */ = {isa = PBXBuildFile; fileRef = F7EA34632D0104C300A6974D /* FeedLoaderPresentationAdapter.swift */; };
 		F7EA34662D0104F800A6974D /* FeedViewAdapter.swift in Sources */ = {isa = PBXBuildFile; fileRef = F7EA34652D0104F800A6974D /* FeedViewAdapter.swift */; };
+		F7EA34752D071E1500A6974D /* ErrorView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F7EA34742D071E1500A6974D /* ErrorView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -222,6 +223,7 @@
 		F7EA34612D01048900A6974D /* FeedImageDataLoaderPresentationAdapter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FeedImageDataLoaderPresentationAdapter.swift; sourceTree = "<group>"; };
 		F7EA34632D0104C300A6974D /* FeedLoaderPresentationAdapter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FeedLoaderPresentationAdapter.swift; sourceTree = "<group>"; };
 		F7EA34652D0104F800A6974D /* FeedViewAdapter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FeedViewAdapter.swift; sourceTree = "<group>"; };
+		F7EA34742D071E1500A6974D /* ErrorView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ErrorView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -379,6 +381,7 @@
 				F701A9E42CF9FA810021F753 /* UIView+Shimmering.swift */,
 				F726C9372CFF51CD00EC8D3B /* UITableView+Dequeueing.swift */,
 				F726C9392CFF52F900EC8D3B /* UIImageView+Animations.swift */,
+				F7EA34742D071E1500A6974D /* ErrorView.swift */,
 				F726C91F2CFF458200EC8D3B /* Feed.storyboard */,
 				F726C9352CFF45DD00EC8D3B /* Feed.xcassets */,
 			);
@@ -875,6 +878,7 @@
 			files = (
 				F726C91C2CFF291000EC8D3B /* FeedPresenter.swift in Sources */,
 				F701AA002CFB04C50021F753 /* FeedImageDataLoader.swift in Sources */,
+				F7EA34752D071E1500A6974D /* ErrorView.swift in Sources */,
 				F726C93C2D005C8A00EC8D3B /* FeedViewModel.swift in Sources */,
 				F701A9E52CF9FA810021F753 /* UIView+Shimmering.swift in Sources */,
 				F726C91E2CFF35A300EC8D3B /* FeedImagePresenter.swift in Sources */,
