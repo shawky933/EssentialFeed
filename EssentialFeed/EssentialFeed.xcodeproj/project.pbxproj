@@ -93,6 +93,7 @@
 		F7EA34862D07320B00A6974D /* Feed.strings in Resources */ = {isa = PBXBuildFile; fileRef = F7EA34812D072E4000A6974D /* Feed.strings */; };
 		F7EA34882D07327B00A6974D /* FeedViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = F7EA34872D07327B00A6974D /* FeedViewModel.swift */; };
 		F7EA348A2D0732B900A6974D /* FeedLoadingViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = F7EA34892D0732B900A6974D /* FeedLoadingViewModel.swift */; };
+		F7EA348C2D0732FE00A6974D /* FeedErrorViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = F7EA348B2D0732FE00A6974D /* FeedErrorViewModel.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -240,6 +241,7 @@
 		F7EA34842D07315200A6974D /* FeedPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FeedPresenter.swift; sourceTree = "<group>"; };
 		F7EA34872D07327B00A6974D /* FeedViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FeedViewModel.swift; sourceTree = "<group>"; };
 		F7EA34892D0732B900A6974D /* FeedLoadingViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FeedLoadingViewModel.swift; sourceTree = "<group>"; };
+		F7EA348B2D0732FE00A6974D /* FeedErrorViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FeedErrorViewModel.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -621,6 +623,7 @@
 			children = (
 				F7EA34872D07327B00A6974D /* FeedViewModel.swift */,
 				F7EA34842D07315200A6974D /* FeedPresenter.swift */,
+				F7EA348B2D0732FE00A6974D /* FeedErrorViewModel.swift */,
 				F7EA34892D0732B900A6974D /* FeedLoadingViewModel.swift */,
 				F7EA34812D072E4000A6974D /* Feed.strings */,
 			);
@@ -896,6 +899,7 @@
 				F78564D02CD3E7750015108C /* URLSessionHTTPClient.swift in Sources */,
 				F70D5C0B2CECC20F00640DB3 /* ManagedCache.swift in Sources */,
 				F70D5BFB2CEC82AE00640DB3 /* CoreDataFeedStore.swift in Sources */,
+				F7EA348C2D0732FE00A6974D /* FeedErrorViewModel.swift in Sources */,
 				F7EA348A2D0732B900A6974D /* FeedLoadingViewModel.swift in Sources */,
 				F70D5C0D2CECC23100640DB3 /* ManagedFeedImage.swift in Sources */,
 			);
