@@ -27,6 +27,7 @@
                                 </label>
                             </subviews>
                             <color key="backgroundColor" red="1" green="0.41568627450980389" blue="0.41568627450980389" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                            <gestureRecognizers/>
                             <constraints>
                                 <constraint firstAttribute="bottom" secondItem="3fW-E2-ifV" secondAttribute="bottom" constant="8" id="7I2-e7-4ZU"/>
                                 <constraint firstAttribute="trailing" secondItem="3fW-E2-ifV" secondAttribute="trailing" id="DG3-17-3g2"/>
@@ -35,6 +36,7 @@
                             </constraints>
                             <connections>
                                 <outlet property="label" destination="3fW-E2-ifV" id="Cay-V6-20N"/>
+                                <outletCollection property="gestureRecognizers" destination="yqB-9g-HwT" appends="YES" id="hya-iH-n02"/>
                             </connections>
                         </view>
                         <view key="tableFooterView" contentMode="scaleToFill" id="7pS-Ms-BOP">
@@ -168,6 +170,11 @@ Location</string>
                     </connections>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="lR4-hf-Xua" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+                <tapGestureRecognizer id="yqB-9g-HwT">
+                    <connections>
+                        <action selector="hideMessageAnimated" destination="dJ3-xD-rhh" id="NWW-4g-K8B"/>
+                    </connections>
+                </tapGestureRecognizer>
             </objects>
             <point key="canvasLocation" x="614.50381679389307" y="-112.67605633802818"/>
         </scene>
