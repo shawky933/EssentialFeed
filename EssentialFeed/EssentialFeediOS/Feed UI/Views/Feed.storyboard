@@ -16,18 +16,35 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <view key="tableHeaderView" contentMode="scaleToFill" id="dJ3-xD-rhh" customClass="ErrorView" customModule="EssentialFeediOS" customModuleProvider="target">
-                            <rect key="frame" x="0.0" y="0.0" width="393" height="16"/>
+                            <rect key="frame" x="0.0" y="0.0" width="393" height="37"/>
                             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                            <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                            <subviews>
+                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Error Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="3fW-E2-ifV">
+                                    <rect key="frame" x="0.0" y="8" width="393" height="21"/>
+                                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                    <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                    <nil key="highlightedColor"/>
+                                </label>
+                            </subviews>
+                            <color key="backgroundColor" red="1" green="0.41568627450980389" blue="0.41568627450980389" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                            <constraints>
+                                <constraint firstAttribute="bottom" secondItem="3fW-E2-ifV" secondAttribute="bottom" constant="8" id="7I2-e7-4ZU"/>
+                                <constraint firstAttribute="trailing" secondItem="3fW-E2-ifV" secondAttribute="trailing" id="DG3-17-3g2"/>
+                                <constraint firstItem="3fW-E2-ifV" firstAttribute="top" secondItem="dJ3-xD-rhh" secondAttribute="top" constant="8" id="HN2-iR-0HF"/>
+                                <constraint firstItem="3fW-E2-ifV" firstAttribute="leading" secondItem="dJ3-xD-rhh" secondAttribute="leading" id="zjm-mq-fyz"/>
+                            </constraints>
+                            <connections>
+                                <outlet property="label" destination="3fW-E2-ifV" id="Cay-V6-20N"/>
+                            </connections>
                         </view>
                         <view key="tableFooterView" contentMode="scaleToFill" id="7pS-Ms-BOP">
-                            <rect key="frame" x="0.0" y="631" width="393" height="16"/>
+                            <rect key="frame" x="0.0" y="652" width="393" height="16"/>
                             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                             <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         </view>
                         <prototypes>
                             <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="FeedImageCell" rowHeight="537" id="eg3-Us-AL0" customClass="FeedImageCell" customModule="EssentialFeediOS" customModuleProvider="target">
-                                <rect key="frame" x="0.0" y="66" width="393" height="537"/>
+                                <rect key="frame" x="0.0" y="87" width="393" height="537"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="eg3-Us-AL0" id="Fys-wY-bZH">
                                     <rect key="frame" x="0.0" y="0.0" width="393" height="537"/>
