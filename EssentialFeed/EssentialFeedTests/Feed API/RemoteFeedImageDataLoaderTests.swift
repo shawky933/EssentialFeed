@@ -183,10 +183,6 @@ final class RemoteFeedImageDataLoaderTests: XCTestCase {
         return (sut: sut, client: client)
     }
 
-    private func anyData() -> Data {
-        Data("any data".utf8)
-    }
-
     private func failure(_ error: RemoteFeedImageDataLoader.Error) -> FeedImageDataLoader.Result {
         .failure(error)
     }
