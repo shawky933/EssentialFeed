@@ -9,22 +9,22 @@ import XCTest
 import EssentialFeed
 
 class URLSessionHTTPClientTests: XCTestCase {
-    
+
     override func tearDown() {
         super.tearDown()
         URLProtocolStub.removeStub()
     }
-    
+
     func test_getFromURL_performsGETRequestWithURL() {
         let url = anyURL()
         let exp = expectation(description: "Wait for request")
-        
+
         URLProtocolStub.observeRequests { request in
             XCTAssertEqual(request.url, url)
             XCTAssertEqual(request.httpMethod, "GET")
             exp.fulfill()
         }
-        
+
         makeSUT().get(from: url) { _ in }
 
         wait(for: [exp], timeout: 1.0)
@@ -47,7 +47,7 @@ class URLSessionHTTPClientTests: XCTestCase {
         XCTAssertEqual(receivedError?.code, requestError.code)
         XCTAssertEqual(receivedError?.domain, requestError.domain)
     }
-    
+
     func test_getFromURL_failsOnAllInvalidRepresentationCases() {
         XCTAssertNotNil(resultErrorFor((data: nil, response: nil, error: nil)))
         XCTAssertNotNil(resultErrorFor((data: nil, response: nonHTTPURLResponse(), error: nil)))
@@ -59,21 +59,21 @@ class URLSessionHTTPClientTests: XCTestCase {
         XCTAssertNotNil(resultErrorFor((data: anyData(), response: anyHTTPURLResponse(), error: anyNSError())))
         XCTAssertNotNil(resultErrorFor((data: anyData(), response: nonHTTPURLResponse(), error: nil)))
     }
-    
+
     func test_getFromURL_succeedsOnHTTPURLResponseWithData() {
         let data = anyData()
         let response = anyHTTPURLResponse()
-        
+
         let receivedValues = resultValuesFor((data: data, response: response, error: nil))
 
         XCTAssertEqual(receivedValues?.data, data)
         XCTAssertEqual(receivedValues?.response.url, response.url)
         XCTAssertEqual(receivedValues?.response.statusCode, response.statusCode)
     }
-    
+
     func test_getFromURL_succeedsWithEmptyDataOnHTTPURLResponseWithNilData() {
         let response = anyHTTPURLResponse()
-        
+
         let receivedValues = resultValuesFor((data: nil, response: response, error: nil))
 
         let emptyData = Data()
@@ -81,9 +81,9 @@ class URLSessionHTTPClientTests: XCTestCase {
         XCTAssertEqual(receivedValues?.response.url, response.url)
         XCTAssertEqual(receivedValues?.response.statusCode, response.statusCode)
     }
-    
+
     // MARK: - Helpers
-    
+
     private func makeSUT(file: StaticString = #filePath, line: UInt = #line) -> HTTPClient {
         let configuration = URLSessionConfiguration.ephemeral
         configuration.protocolClasses = [URLProtocolStub.self]
@@ -93,7 +93,7 @@ class URLSessionHTTPClientTests: XCTestCase {
         trackForMemoryLeak(sut, file: file, line: line)
         return sut
     }
-    
+
     private func resultValuesFor(
         _ values: (data: Data?, response: URLResponse?, error: Error?),
         file: StaticString = #file,
@@ -109,7 +109,7 @@ class URLSessionHTTPClientTests: XCTestCase {
             return nil
         }
     }
-    
+
     private func resultErrorFor(
         _ values: (data: Data?, response: URLResponse?, error: Error?)? = nil,
         taskHandler: (HTTPClientTask) -> Void = { _ in },
@@ -126,7 +126,7 @@ class URLSessionHTTPClientTests: XCTestCase {
             return nil
         }
     }
-    
+
     private func resultFor(
         _ values: (data: Data?, response: URLResponse?, error: Error?)?,
         taskHandler: (HTTPClientTask) -> Void = { _ in },
@@ -147,15 +147,15 @@ class URLSessionHTTPClientTests: XCTestCase {
         wait(for: [exp], timeout: 1.0)
         return receivedResult
     }
-    
+
     private func anyNSError() -> NSError {
         NSError(domain: "any Error", code: 0)
     }
-    
+
     private func anyHTTPURLResponse() -> HTTPURLResponse {
         HTTPURLResponse(url: anyURL(), statusCode: 200, httpVersion: nil, headerFields: nil)!
     }
-    
+
     private func nonHTTPURLResponse() -> URLResponse {
         URLResponse(
             url: anyURL(),
@@ -165,3 +165,4 @@ class URLSessionHTTPClientTests: XCTestCase {
         )
     }
 }
+
