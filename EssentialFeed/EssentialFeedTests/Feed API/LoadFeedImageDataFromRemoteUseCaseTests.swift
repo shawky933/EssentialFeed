@@ -122,8 +122,8 @@ final class LoadFeedImageDataFromRemoteUseCaseTests: XCTestCase {
     ) -> (sut: RemoteFeedImageDataLoader, client: HTTPClientSpy) {
         let client = HTTPClientSpy()
         let sut = RemoteFeedImageDataLoader(client: client)
-        trackForMemoryLeak(client)
-        trackForMemoryLeak(sut)
+        trackForMemoryLeaks(client)
+        trackForMemoryLeaks(sut)
         return (sut: sut, client: client)
     }
 
