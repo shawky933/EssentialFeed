@@ -1620,7 +1620,7 @@
 				F71709712D1071C900DF857D /* FeedStore2.xcdatamodel */,
 				F70D5BFD2CEC848A00640DB3 /* FeedStore.xcdatamodel */,
 			);
-			currentVersion = F70D5BFD2CEC848A00640DB3 /* FeedStore.xcdatamodel */;
+			currentVersion = F71709712D1071C900DF857D /* FeedStore2.xcdatamodel */;
 			path = FeedStore.xcdatamodeld;
 			sourceTree = "<group>";
 			versionGroupType = wrapper.xcdatamodel;
