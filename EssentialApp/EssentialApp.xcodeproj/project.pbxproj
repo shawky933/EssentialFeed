@@ -22,6 +22,7 @@
 		F7B9FA222D13051600626D9B /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F7B9FA172D13051600626D9B /* LaunchScreen.storyboard */; };
 		F7B9FA232D13051600626D9B /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F7B9FA192D13051600626D9B /* Main.storyboard */; };
 		F7B9FA252D130CC500626D9B /* XCTestCase+MemoryLeakTracking.swift in Sources */ = {isa = PBXBuildFile; fileRef = F7B9FA242D130CC500626D9B /* XCTestCase+MemoryLeakTracking.swift */; };
+		F7B9FA292D130E1000626D9B /* SharedTestHelpers.swift in Sources */ = {isa = PBXBuildFile; fileRef = F7B9FA282D130E0500626D9B /* SharedTestHelpers.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -74,6 +75,7 @@
 		F7B9FA182D13051600626D9B /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		F7B9FA1A2D13051600626D9B /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
 		F7B9FA242D130CC500626D9B /* XCTestCase+MemoryLeakTracking.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "XCTestCase+MemoryLeakTracking.swift"; sourceTree = "<group>"; };
+		F7B9FA282D130E0500626D9B /* SharedTestHelpers.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SharedTestHelpers.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -136,6 +138,7 @@
 			isa = PBXGroup;
 			children = (
 				F7B9FA242D130CC500626D9B /* XCTestCase+MemoryLeakTracking.swift */,
+				F7B9FA282D130E0500626D9B /* SharedTestHelpers.swift */,
 			);
 			path = Helpers;
 			sourceTree = "<group>";
@@ -318,6 +321,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				F7B9FA292D130E1000626D9B /* SharedTestHelpers.swift in Sources */,
 				F7B9FA0D2D13051200626D9B /* FeedImageDataLoaderWithFallbackComposite.swift in Sources */,
 				F7B9FA252D130CC500626D9B /* XCTestCase+MemoryLeakTracking.swift in Sources */,
 				F7B9FA0E2D13051200626D9B /* FeedLoaderWithFallbackCompositeTests.swift in Sources */,
