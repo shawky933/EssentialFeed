@@ -23,6 +23,7 @@
 		F7B9FA232D13051600626D9B /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F7B9FA192D13051600626D9B /* Main.storyboard */; };
 		F7B9FA252D130CC500626D9B /* XCTestCase+MemoryLeakTracking.swift in Sources */ = {isa = PBXBuildFile; fileRef = F7B9FA242D130CC500626D9B /* XCTestCase+MemoryLeakTracking.swift */; };
 		F7B9FA292D130E1000626D9B /* SharedTestHelpers.swift in Sources */ = {isa = PBXBuildFile; fileRef = F7B9FA282D130E0500626D9B /* SharedTestHelpers.swift */; };
+		F7B9FA2C2D13237C00626D9B /* FeedLoaderCacheDecoratorTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = F7B9FA2B2D13237200626D9B /* FeedLoaderCacheDecoratorTests.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -68,6 +69,7 @@
 		F7B9FA1A2D13051600626D9B /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
 		F7B9FA242D130CC500626D9B /* XCTestCase+MemoryLeakTracking.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "XCTestCase+MemoryLeakTracking.swift"; sourceTree = "<group>"; };
 		F7B9FA282D130E0500626D9B /* SharedTestHelpers.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SharedTestHelpers.swift; sourceTree = "<group>"; };
+		F7B9FA2B2D13237200626D9B /* FeedLoaderCacheDecoratorTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FeedLoaderCacheDecoratorTests.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -134,6 +136,7 @@
 				F7B9FA082D13051200626D9B /* EssentialApp.xctestplan */,
 				F7B9FA092D13051200626D9B /* FeedImageDataLoaderWithFallbackComposite.swift */,
 				F7B9FA0A2D13051200626D9B /* FeedLoaderWithFallbackCompositeTests.swift */,
+				F7B9FA2B2D13237200626D9B /* FeedLoaderCacheDecoratorTests.swift */,
 			);
 			path = EssentialAppTests;
 			sourceTree = "<group>";
@@ -142,13 +145,13 @@
 			isa = PBXGroup;
 			children = (
 				F7B9FA112D13051600626D9B /* AppDelegate.swift */,
-				F7B9FA122D13051600626D9B /* Assets.xcassets */,
-				F7B9FA132D13051600626D9B /* FeedImageDataLoaderWithFallbackComposite.swift */,
-				F7B9FA142D13051600626D9B /* FeedLoaderWithFallbackComposite.swift */,
-				F7B9FA152D13051600626D9B /* Info.plist */,
-				F7B9FA172D13051600626D9B /* LaunchScreen.storyboard */,
-				F7B9FA192D13051600626D9B /* Main.storyboard */,
 				F7B9FA1A2D13051600626D9B /* SceneDelegate.swift */,
+				F7B9FA142D13051600626D9B /* FeedLoaderWithFallbackComposite.swift */,
+				F7B9FA132D13051600626D9B /* FeedImageDataLoaderWithFallbackComposite.swift */,
+				F7B9FA192D13051600626D9B /* Main.storyboard */,
+				F7B9FA122D13051600626D9B /* Assets.xcassets */,
+				F7B9FA172D13051600626D9B /* LaunchScreen.storyboard */,
+				F7B9FA152D13051600626D9B /* Info.plist */,
 			);
 			path = EssentialApp;
 			sourceTree = "<group>";
@@ -276,6 +279,7 @@
 				F7B9FA292D130E1000626D9B /* SharedTestHelpers.swift in Sources */,
 				F7B9FA0D2D13051200626D9B /* FeedImageDataLoaderWithFallbackComposite.swift in Sources */,
 				F7B9FA252D130CC500626D9B /* XCTestCase+MemoryLeakTracking.swift in Sources */,
+				F7B9FA2C2D13237C00626D9B /* FeedLoaderCacheDecoratorTests.swift in Sources */,
 				F7B9FA0E2D13051200626D9B /* FeedLoaderWithFallbackCompositeTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -324,7 +328,7 @@
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
 				INFOPLIST_KEY_UIMainStoryboardFile = Main;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations = UIInterfaceOrientationPortrait;
-				IPHONEOS_DEPLOYMENT_TARGET = 18.1;
+				IPHONEOS_DEPLOYMENT_TARGET = 18.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -356,7 +360,7 @@
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
 				INFOPLIST_KEY_UIMainStoryboardFile = Main;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations = UIInterfaceOrientationPortrait;
-				IPHONEOS_DEPLOYMENT_TARGET = 18.1;
+				IPHONEOS_DEPLOYMENT_TARGET = 18.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
