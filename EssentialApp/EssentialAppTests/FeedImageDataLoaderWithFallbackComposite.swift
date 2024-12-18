@@ -94,7 +94,7 @@ class FeedImageDataLoaderWithFallbackCompositeTests: XCTestCase {
     // MARK: - Helpers
 
     private func makeSUT(
-        file: StaticString = #file,
+        file: StaticString = #filePath,
         line: UInt = #line
     ) -> (sut: FeedImageDataLoader, primary: LoaderSpy, fallback: LoaderSpy) {
         let primaryLoader = LoaderSpy()
@@ -127,12 +127,6 @@ class FeedImageDataLoaderWithFallbackCompositeTests: XCTestCase {
         action()
 
         wait(for: [exp], timeout: 1.0)
-    }
-
-    private func trackForMemoryLeaks(_ instance: AnyObject, file: StaticString = #file, line: UInt = #line) {
-        addTeardownBlock { [weak instance] in
-            XCTAssertNil(instance, "Instance should have been deallocated. Potential memory leak.", file: file, line: line)
-        }
     }
 
     func anyData() -> Data {
