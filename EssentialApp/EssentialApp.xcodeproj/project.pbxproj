@@ -198,12 +198,12 @@
 				F7B9FA072D13051200626D9B /* Helpers */,
 				F7B9FA082D13051200626D9B /* EssentialApp.xctestplan */,
 				F76464F52D17078E007F164E /* SceneDelegateTests.swift */,
+				F76465192D170F66007F164E /* FeedAcceptanceTests.swift */,
 				F76465172D170B35007F164E /* FeedUIIntegrationTests.swift */,
 				F7B9FA0A2D13051200626D9B /* FeedLoaderWithFallbackCompositeTests.swift */,
 				F7B9FA2B2D13237200626D9B /* FeedLoaderCacheDecoratorTests.swift */,
 				F7B9FA092D13051200626D9B /* FeedImageDataLoaderWithFallbackCompositeTests.swift */,
 				F7B9FA352D132F6A00626D9B /* FeedImageDataLoaderCacheDecoratorTests.swift */,
-				F76465192D170F66007F164E /* FeedAcceptanceTests.swift */,
 			);
 			path = EssentialAppTests;
 			sourceTree = "<group>";
