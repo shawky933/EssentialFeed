@@ -38,7 +38,9 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
         willConnectTo session: UISceneSession,
         options connectionOptions: UIScene.ConnectionOptions
     ) {
-        guard let _ = (scene as? UIWindowScene) else { return }
+        guard let scene = (scene as? UIWindowScene) else { return }
+
+        window = UIWindow(windowScene: scene)
 
         configureWindow()
     }
@@ -63,6 +65,8 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
                 )
             )
         )
+
+        window?.makeKeyAndVisible()
     }
 
     func sceneWillResignActive(_ scene: UIScene) {
