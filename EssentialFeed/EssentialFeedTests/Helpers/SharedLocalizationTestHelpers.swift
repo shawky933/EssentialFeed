@@ -54,3 +54,17 @@ private func allLocalizedStringKeys(in bundles: [LocalizedBundle], table: String
         return acc.union(Set(keys))
     }
 }
+
+extension Date {
+    func adding(seconds: TimeInterval) -> Date {
+        self + seconds
+    }
+
+    func adding(minutes: Int) -> Date {
+        Calendar(identifier: .gregorian).date(byAdding: .minute, value: minutes, to: self)!
+    }
+
+    func adding(days: Int) -> Date {
+        Calendar(identifier: .gregorian).date(byAdding: .day, value: days, to: self)!
+    }
+}
