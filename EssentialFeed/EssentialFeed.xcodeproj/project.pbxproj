@@ -62,6 +62,9 @@
 		F75A7CD02D5604AD0052F20C /* LoadResourcePresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = F75A7CCF2D5604AD0052F20C /* LoadResourcePresenter.swift */; };
 		F75A7CD32D560B0D0052F20C /* Shared.strings in Resources */ = {isa = PBXBuildFile; fileRef = F75A7CD12D560B0D0052F20C /* Shared.strings */; };
 		F75A7CD52D560C720052F20C /* SharedLocalizationTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = F75A7CD42D560C720052F20C /* SharedLocalizationTests.swift */; };
+		F75A7CD92D560F9F0052F20C /* SharedLocalizationTestHelpers.swift in Sources */ = {isa = PBXBuildFile; fileRef = F75A7CD82D560F9F0052F20C /* SharedLocalizationTestHelpers.swift */; };
+		F75A7CDA2D560F9F0052F20C /* SharedLocalizationTestHelpers.swift in Sources */ = {isa = PBXBuildFile; fileRef = F75A7CD82D560F9F0052F20C /* SharedLocalizationTestHelpers.swift */; };
+		F75A7CDB2D560F9F0052F20C /* SharedLocalizationTestHelpers.swift in Sources */ = {isa = PBXBuildFile; fileRef = F75A7CD82D560F9F0052F20C /* SharedLocalizationTestHelpers.swift */; };
 		F764651C2D172D7D007F164E /* FeedSnapshotTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = F764651B2D172D7D007F164E /* FeedSnapshotTests.swift */; };
 		F76465212D17333B007F164E /* UIImage+TestHelpers.swift in Sources */ = {isa = PBXBuildFile; fileRef = F76465202D17333B007F164E /* UIImage+TestHelpers.swift */; };
 		F76465232D173543007F164E /* UITableView+HeaderSizing.swift in Sources */ = {isa = PBXBuildFile; fileRef = F76465222D173543007F164E /* UITableView+HeaderSizing.swift */; };
@@ -215,6 +218,7 @@
 		F75A7CD42D560C720052F20C /* SharedLocalizationTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SharedLocalizationTests.swift; sourceTree = "<group>"; };
 		F75A7CD62D560CF40052F20C /* el */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = el; path = el.lproj/Shared.strings; sourceTree = "<group>"; };
 		F75A7CD72D560CF60052F20C /* pt-BR */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = "pt-BR"; path = "pt-BR.lproj/Shared.strings"; sourceTree = "<group>"; };
+		F75A7CD82D560F9F0052F20C /* SharedLocalizationTestHelpers.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SharedLocalizationTestHelpers.swift; sourceTree = "<group>"; };
 		F764651B2D172D7D007F164E /* FeedSnapshotTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FeedSnapshotTests.swift; sourceTree = "<group>"; };
 		F76465202D17333B007F164E /* UIImage+TestHelpers.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIImage+TestHelpers.swift"; sourceTree = "<group>"; };
 		F76465222D173543007F164E /* UITableView+HeaderSizing.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UITableView+HeaderSizing.swift"; sourceTree = "<group>"; };
@@ -592,6 +596,7 @@
 			children = (
 				F78564CD2CD3D62C0015108C /* XCTestCase+MemoryLeakTracking.swift */,
 				F70D5BE32CE36B3B00640DB3 /* SharedTestHelpers.swift */,
+				F75A7CD82D560F9F0052F20C /* SharedLocalizationTestHelpers.swift */,
 			);
 			path = Helpers;
 			sourceTree = "<group>";
@@ -978,6 +983,7 @@
 				F7BBB81A2CD23C9C0081AA7F /* URLSessionHTTPClientTests.swift in Sources */,
 				F70D5BDE2CE29CE900640DB3 /* FeedStoreSpy.swift in Sources */,
 				F70D5BE52CE36B3B00640DB3 /* SharedTestHelpers.swift in Sources */,
+				F75A7CDB2D560F9F0052F20C /* SharedLocalizationTestHelpers.swift in Sources */,
 				F75A7CD52D560C720052F20C /* SharedLocalizationTests.swift in Sources */,
 				F74A50342CDCC0980066BF5D /* CacheFeedUseCaseTests.swift in Sources */,
 				F70D5BF52CEBBEA200640DB3 /* XCTestCase+FailableDeleteFeedStoreSpecs.swift in Sources */,
@@ -1026,6 +1032,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				F74A50312CDA1CE90066BF5D /* EssentialFeedAPIEndToEndTests.swift in Sources */,
+				F75A7CD92D560F9F0052F20C /* SharedLocalizationTestHelpers.swift in Sources */,
 				F78564DF2CD4029B0015108C /* XCTestCase+MemoryLeakTracking.swift in Sources */,
 				F70D5BE42CE36B3B00640DB3 /* SharedTestHelpers.swift in Sources */,
 			);
@@ -1036,6 +1043,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				F7970BDB2CEDE47400246108 /* SharedTestHelpers.swift in Sources */,
+				F75A7CDA2D560F9F0052F20C /* SharedLocalizationTestHelpers.swift in Sources */,
 				F7970BD82CEDDD2E00246108 /* EssentialFeedCacheIntegrationTests.swift in Sources */,
 				F717096C2D106DA700DF857D /* FeedImageDataStoreSpy.swift in Sources */,
 				F7970BDA2CEDE46200246108 /* FeedCacheTestHelpers.swift in Sources */,
