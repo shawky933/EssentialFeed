@@ -20,7 +20,7 @@ final class ListSnapshotTests: XCTestCase {
         assert(snapshot: sut.snapshot(for: .iPhone8(style: .dark)), named: "EMPTY_LIST_dark")
     }
 
-    func test_feedWithErrorMessage() {
+    func test_listWithErrorMessage() {
         let sut = makeSUT()
 
         sut.display(.error(message: "This is a\nmulti-line\nerror message"))
