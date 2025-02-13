@@ -40,7 +40,7 @@ public final class CommentsUIComposer {
         let bundle = Bundle(for: ListViewController.self)
         let storyboard = UIStoryboard(name: "Feed", bundle: bundle)
         let feedController = storyboard.instantiateInitialViewController() as! ListViewController
-        feedController.title = FeedPresenter.title
+        feedController.title = ImageCommentsPresenter.title
         return feedController
     }
 }
