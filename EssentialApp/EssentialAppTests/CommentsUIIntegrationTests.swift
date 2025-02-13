@@ -94,7 +94,7 @@ class CommentsUIIntegrationTests: FeedUIIntegrationTests {
         assertThat(sut, isRendering: [comment])
     }
 
-    override func test_loadFeedCompletion_rendersErrorMessageOnErrorUntilNextReload() {
+    func test_loadCommentsCompletion_rendersErrorMessageOnErrorUntilNextReload() {
         let (sut, loader) = makeSUT()
 
         sut.simulateAppearance()
@@ -120,7 +120,7 @@ class CommentsUIIntegrationTests: FeedUIIntegrationTests {
         XCTAssertEqual(sut.errorMessage, nil)
     }
 
-    override func test_loadFeedCompletion_dispatchesFromBackgroundThreadToMainThread() {
+    func test_loadCommentsCompletion_dispatchesFromBackgroundThreadToMainThread() {
         let (sut, loader) = makeSUT()
         sut.simulateAppearance()
 
@@ -191,8 +191,6 @@ class CommentsUIIntegrationTests: FeedUIIntegrationTests {
 
     private class LoaderSpy {
 
-        // MARK: - Feed Loader
-
         private var requests = [PassthroughSubject<[ImageComment], Error>]()
 
         var loadCommentsCallCount: Int { requests.count }
@@ -203,8 +201,8 @@ class CommentsUIIntegrationTests: FeedUIIntegrationTests {
             return publisher.eraseToAnyPublisher()
         }
 
-        func completeCommentsLoading(with feed: [ImageComment] = [], at index: Int = 0) {
-            requests[index].send(feed)
+        func completeCommentsLoading(with comments: [ImageComment] = [], at index: Int = 0) {
+            requests[index].send(comments)
         }
 
         func completeCommentsLoadingWithError(at index: Int = 0) {
