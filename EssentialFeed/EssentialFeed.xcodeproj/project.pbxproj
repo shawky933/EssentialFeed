@@ -114,6 +114,9 @@
 		F7C890D82D66307B00CE0F49 /* FEED_WITH_LOAD_MORE_INDICATOR_dark.png in Resources */ = {isa = PBXBuildFile; fileRef = F7C890D62D66307B00CE0F49 /* FEED_WITH_LOAD_MORE_INDICATOR_dark.png */; };
 		F7C890D92D66307B00CE0F49 /* FEED_WITH_LOAD_MORE_INDICATOR_light.png in Resources */ = {isa = PBXBuildFile; fileRef = F7C890D72D66307B00CE0F49 /* FEED_WITH_LOAD_MORE_INDICATOR_light.png */; };
 		F7C890DB2D6632F900CE0F49 /* LoadMoreCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = F7C890DA2D6632F900CE0F49 /* LoadMoreCell.swift */; };
+		F7C890DF2D6634BB00CE0F49 /* FEED_WITH_LOAD_MORE_ERROR_dark.png in Resources */ = {isa = PBXBuildFile; fileRef = F7C890DC2D6634BB00CE0F49 /* FEED_WITH_LOAD_MORE_ERROR_dark.png */; };
+		F7C890E02D6634BB00CE0F49 /* FEED_WITH_LOAD_MORE_ERROR_light.png in Resources */ = {isa = PBXBuildFile; fileRef = F7C890DD2D6634BB00CE0F49 /* FEED_WITH_LOAD_MORE_ERROR_light.png */; };
+		F7C890E12D6634BB00CE0F49 /* FEED_WITH_LOAD_MORE_ERROR_light_extraExtraExtraLarge.png in Resources */ = {isa = PBXBuildFile; fileRef = F7C890DE2D6634BB00CE0F49 /* FEED_WITH_LOAD_MORE_ERROR_light_extraExtraExtraLarge.png */; };
 		F7EA34752D071E1500A6974D /* ErrorView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F7EA34742D071E1500A6974D /* ErrorView.swift */; };
 		F7EA347A2D0722CE00A6974D /* UIRefreshControl+Helpers.swift in Sources */ = {isa = PBXBuildFile; fileRef = F7EA34792D0722C100A6974D /* UIRefreshControl+Helpers.swift */; };
 		F7EA347D2D07258300A6974D /* FeedPresenterTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = F7EA347C2D07257500A6974D /* FeedPresenterTests.swift */; };
@@ -297,6 +300,9 @@
 		F7C890D62D66307B00CE0F49 /* FEED_WITH_LOAD_MORE_INDICATOR_dark.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = FEED_WITH_LOAD_MORE_INDICATOR_dark.png; sourceTree = "<group>"; };
 		F7C890D72D66307B00CE0F49 /* FEED_WITH_LOAD_MORE_INDICATOR_light.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = FEED_WITH_LOAD_MORE_INDICATOR_light.png; sourceTree = "<group>"; };
 		F7C890DA2D6632F900CE0F49 /* LoadMoreCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoadMoreCell.swift; sourceTree = "<group>"; };
+		F7C890DC2D6634BB00CE0F49 /* FEED_WITH_LOAD_MORE_ERROR_dark.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = FEED_WITH_LOAD_MORE_ERROR_dark.png; sourceTree = "<group>"; };
+		F7C890DD2D6634BB00CE0F49 /* FEED_WITH_LOAD_MORE_ERROR_light.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = FEED_WITH_LOAD_MORE_ERROR_light.png; sourceTree = "<group>"; };
+		F7C890DE2D6634BB00CE0F49 /* FEED_WITH_LOAD_MORE_ERROR_light_extraExtraExtraLarge.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = FEED_WITH_LOAD_MORE_ERROR_light_extraExtraExtraLarge.png; sourceTree = "<group>"; };
 		F7EA34742D071E1500A6974D /* ErrorView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ErrorView.swift; sourceTree = "<group>"; };
 		F7EA34792D0722C100A6974D /* UIRefreshControl+Helpers.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIRefreshControl+Helpers.swift"; sourceTree = "<group>"; };
 		F7EA347C2D07257500A6974D /* FeedPresenterTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FeedPresenterTests.swift; sourceTree = "<group>"; };
@@ -711,6 +717,9 @@
 		F75A7D092D5BA8910052F20C /* snapshots */ = {
 			isa = PBXGroup;
 			children = (
+				F7C890DC2D6634BB00CE0F49 /* FEED_WITH_LOAD_MORE_ERROR_dark.png */,
+				F7C890DD2D6634BB00CE0F49 /* FEED_WITH_LOAD_MORE_ERROR_light.png */,
+				F7C890DE2D6634BB00CE0F49 /* FEED_WITH_LOAD_MORE_ERROR_light_extraExtraExtraLarge.png */,
 				F7C890D62D66307B00CE0F49 /* FEED_WITH_LOAD_MORE_INDICATOR_dark.png */,
 				F7C890D72D66307B00CE0F49 /* FEED_WITH_LOAD_MORE_INDICATOR_light.png */,
 				F75A7D032D5BA8910052F20C /* FEED_WITH_CONTENT_dark.png */,
@@ -1123,6 +1132,9 @@
 			files = (
 				F75A7D0A2D5BA8910052F20C /* FEED_WITH_CONTENT_light.png in Resources */,
 				F75A7D242D5BAE3C0052F20C /* IMAGE_COMMENTS_dark.png in Resources */,
+				F7C890DF2D6634BB00CE0F49 /* FEED_WITH_LOAD_MORE_ERROR_dark.png in Resources */,
+				F7C890E02D6634BB00CE0F49 /* FEED_WITH_LOAD_MORE_ERROR_light.png in Resources */,
+				F7C890E12D6634BB00CE0F49 /* FEED_WITH_LOAD_MORE_ERROR_light_extraExtraExtraLarge.png in Resources */,
 				F719A16E2D5D1CAC001E55CF /* LIST_WITH_ERROR_MESSAGE_light_extraExtraExtraLarge.png in Resources */,
 				F7C890D82D66307B00CE0F49 /* FEED_WITH_LOAD_MORE_INDICATOR_dark.png in Resources */,
 				F7C890D92D66307B00CE0F49 /* FEED_WITH_LOAD_MORE_INDICATOR_light.png in Resources */,
