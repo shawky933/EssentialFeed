@@ -37,7 +37,6 @@
 		F7B9FA222D13051600626D9B /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F7B9FA172D13051600626D9B /* LaunchScreen.storyboard */; };
 		F7B9FA252D130CC500626D9B /* XCTestCase+MemoryLeakTracking.swift in Sources */ = {isa = PBXBuildFile; fileRef = F7B9FA242D130CC500626D9B /* XCTestCase+MemoryLeakTracking.swift */; };
 		F7B9FA292D130E1000626D9B /* SharedTestHelpers.swift in Sources */ = {isa = PBXBuildFile; fileRef = F7B9FA282D130E0500626D9B /* SharedTestHelpers.swift */; };
-		F7C890ED2D689F1400CE0F49 /* NullStore.swift in Sources */ = {isa = PBXBuildFile; fileRef = F7C890EC2D689F1400CE0F49 /* NullStore.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -97,7 +96,6 @@
 		F7B9FA1A2D13051600626D9B /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
 		F7B9FA242D130CC500626D9B /* XCTestCase+MemoryLeakTracking.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "XCTestCase+MemoryLeakTracking.swift"; sourceTree = "<group>"; };
 		F7B9FA282D130E0500626D9B /* SharedTestHelpers.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SharedTestHelpers.swift; sourceTree = "<group>"; };
-		F7C890EC2D689F1400CE0F49 /* NullStore.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NullStore.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -184,7 +182,6 @@
 			children = (
 				F7B9FA112D13051600626D9B /* AppDelegate.swift */,
 				F7B9FA1A2D13051600626D9B /* SceneDelegate.swift */,
-				F7C890EC2D689F1400CE0F49 /* NullStore.swift */,
 				F75A7CAD2D5227DA0052F20C /* CombineHelpers.swift */,
 				F76464F72D170AB0007F164E /* FeedUIComposer.swift */,
 				F719A1772D5E284E001E55CF /* CommentsUIComposer.swift */,
@@ -309,7 +306,6 @@
 				F7B9FA1C2D13051600626D9B /* AppDelegate.swift in Sources */,
 				F76464FE2D170AB0007F164E /* FeedViewAdapter.swift in Sources */,
 				F76464FF2D170AB0007F164E /* FeedUIComposer.swift in Sources */,
-				F7C890ED2D689F1400CE0F49 /* NullStore.swift in Sources */,
 				F76465012D170AB0007F164E /* LoadResourcePresentationAdapter.swift in Sources */,
 				F76465022D170AB0007F164E /* WeakRefVirtualProxy.swift in Sources */,
 				F7B9FA1F2D13051600626D9B /* SceneDelegate.swift in Sources */,
