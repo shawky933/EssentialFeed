@@ -1,5 +1,5 @@
 //
-//  CoreDataFeedStore+FeedStore.swift.swift
+//  CoreDataFeedStore+FeedStore.swift
 //  EssentialFeed
 //
 //  Created by Shawky Elhanak on 16.12.24.

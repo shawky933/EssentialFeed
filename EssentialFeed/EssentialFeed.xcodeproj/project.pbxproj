@@ -44,7 +44,7 @@
 		F717096E2D106E5600DF857D /* CacheFeedImageDataUseCaseTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = F717096D2D106E5600DF857D /* CacheFeedImageDataUseCaseTests.swift */; };
 		F71709702D106FFB00DF857D /* CoreDataFeedImageDataStoreTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = F717096F2D106FFB00DF857D /* CoreDataFeedImageDataStoreTests.swift */; };
 		F71709732D10736A00DF857D /* CoreDataFeedStore+FeedImageDataStore.swift in Sources */ = {isa = PBXBuildFile; fileRef = F71709722D10736A00DF857D /* CoreDataFeedStore+FeedImageDataStore.swift */; };
-		F71709752D10768600DF857D /* CoreDataFeedStore+FeedStore.swift.swift in Sources */ = {isa = PBXBuildFile; fileRef = F71709742D10768600DF857D /* CoreDataFeedStore+FeedStore.swift.swift */; };
+		F71709752D10768600DF857D /* CoreDataFeedStore+FeedStore.swift in Sources */ = {isa = PBXBuildFile; fileRef = F71709742D10768600DF857D /* CoreDataFeedStore+FeedStore.swift */; };
 		F719A16E2D5D1CAC001E55CF /* LIST_WITH_ERROR_MESSAGE_light_extraExtraExtraLarge.png in Resources */ = {isa = PBXBuildFile; fileRef = F719A16D2D5D1CAC001E55CF /* LIST_WITH_ERROR_MESSAGE_light_extraExtraExtraLarge.png */; };
 		F719A1702D5D1CBA001E55CF /* IMAGE_COMMENTS_light_extraExtraExtraLarge.png in Resources */ = {isa = PBXBuildFile; fileRef = F719A16F2D5D1CBA001E55CF /* IMAGE_COMMENTS_light_extraExtraExtraLarge.png */; };
 		F719A1732D5D1E24001E55CF /* FEED_WITH_CONTENT_light_extraExtraExtraLarge.png in Resources */ = {isa = PBXBuildFile; fileRef = F719A1712D5D1E24001E55CF /* FEED_WITH_CONTENT_light_extraExtraExtraLarge.png */; };
@@ -233,7 +233,7 @@
 		F717096F2D106FFB00DF857D /* CoreDataFeedImageDataStoreTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoreDataFeedImageDataStoreTests.swift; sourceTree = "<group>"; };
 		F71709712D1071C900DF857D /* FeedStore2.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = FeedStore2.xcdatamodel; sourceTree = "<group>"; };
 		F71709722D10736A00DF857D /* CoreDataFeedStore+FeedImageDataStore.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "CoreDataFeedStore+FeedImageDataStore.swift"; sourceTree = "<group>"; };
-		F71709742D10768600DF857D /* CoreDataFeedStore+FeedStore.swift.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "CoreDataFeedStore+FeedStore.swift.swift"; sourceTree = "<group>"; };
+		F71709742D10768600DF857D /* CoreDataFeedStore+FeedStore.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "CoreDataFeedStore+FeedStore.swift"; sourceTree = "<group>"; };
 		F719A16D2D5D1CAC001E55CF /* LIST_WITH_ERROR_MESSAGE_light_extraExtraExtraLarge.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = LIST_WITH_ERROR_MESSAGE_light_extraExtraExtraLarge.png; sourceTree = "<group>"; };
 		F719A16F2D5D1CBA001E55CF /* IMAGE_COMMENTS_light_extraExtraExtraLarge.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = IMAGE_COMMENTS_light_extraExtraExtraLarge.png; sourceTree = "<group>"; };
 		F719A1712D5D1E24001E55CF /* FEED_WITH_CONTENT_light_extraExtraExtraLarge.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = FEED_WITH_CONTENT_light_extraExtraExtraLarge.png; sourceTree = "<group>"; };
@@ -539,7 +539,7 @@
 			isa = PBXGroup;
 			children = (
 				F70D5BFA2CEC82AB00640DB3 /* CoreDataFeedStore.swift */,
-				F71709742D10768600DF857D /* CoreDataFeedStore+FeedStore.swift.swift */,
+				F71709742D10768600DF857D /* CoreDataFeedStore+FeedStore.swift */,
 				F71709722D10736A00DF857D /* CoreDataFeedStore+FeedImageDataStore.swift */,
 				F70D5C0C2CECC23100640DB3 /* ManagedFeedImage.swift */,
 				F70D5C0A2CECC20F00640DB3 /* ManagedCache.swift */,
@@ -1186,7 +1186,7 @@
 				F71709672D106A9B00DF857D /* LocalFeedImageDataLoader.swift in Sources */,
 				F70D5C092CECC19200640DB3 /* CoreDataHelpers.swift in Sources */,
 				F7A98B422CD216DF00D499BD /* FeedItemsMapper.swift in Sources */,
-				F71709752D10768600DF857D /* CoreDataFeedStore+FeedStore.swift.swift in Sources */,
+				F71709752D10768600DF857D /* CoreDataFeedStore+FeedStore.swift in Sources */,
 				F75A7CDF2D5627A00052F20C /* ResourceErrorView.swift in Sources */,
 				F75A7CC82D53D37A0052F20C /* FeedImageDataMapper.swift in Sources */,
 				F7EA34932D073BC900A6974D /* FeedImageViewModel.swift in Sources */,
