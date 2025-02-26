@@ -80,10 +80,12 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
     }
 
     func sceneWillResignActive(_ scene: UIScene) {
-        do {
-            try localFeedLoader.validateCache()
-        } catch {
-            logger.error("Failed to validate cache with error: \(error.localizedDescription)")
+        scheduler.schedule { [localFeedLoader, logger] in
+            do {
+                try localFeedLoader.validateCache()
+            } catch {
+                logger.error("Failed to validate cache with error: \(error.localizedDescription)")
+            }
         }
     }
 
@@ -104,10 +106,10 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
 
     private func makeRemoteFeedLoaderWithLocalFallback() -> AnyPublisher<Paginated<FeedImage>, Error> {
         makeRemoteFeedLoader()
+            .receive(on: scheduler)
             .caching(to: localFeedLoader)
             .fallback(to: localFeedLoader.loadPublisher)
             .map(makeFirstPage)
-            .subscribe(on: scheduler)
             .eraseToAnyPublisher()
     }
 
@@ -118,6 +120,7 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
                 (cachedItems + newItems, newItems.last)
             }
             .map(makePage)
+            .receive(on: scheduler)
             .caching(to: localFeedLoader)
             .subscribe(on: scheduler)
             .eraseToAnyPublisher()
@@ -154,8 +157,8 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
                 httpClient
                     .getPublisher(from: url)
                     .tryMap(FeedImageDataMapper.map)
+                    .receive(on: scheduler)
                     .caching(to: localImageLoader, using: url)
-                    .subscribe(on: scheduler)
                     .eraseToAnyPublisher()
             })
             .subscribe(on: scheduler)
